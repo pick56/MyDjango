@@ -8,6 +8,8 @@ python manage.py runserver 0.0.0.0:8889
 python manage.py startapp polls
 应用和mysite有区别
 
+创建完app之后还要再mysite/settings.py里的INSTALLED_APPS配置一下
+
 3，改变模型需要这三步：
 
 编辑 models.py 文件，改变模型。
