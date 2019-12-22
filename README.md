@@ -15,6 +15,9 @@ https://docs.djangoproject.com/zh-hans/2.1/intro/tutorial01/
 
 3，基本配置已经写好。
 
+# long_fakenews_detection
+一个针对长文本的谣言检测网站，（but只包含网页部分，核心模型部分未上传）
+
 # 用python的好处就是
 用一些模板可以让你可以快速的搭建一个可以运行在linux内核服务器上的一个网站。
 
