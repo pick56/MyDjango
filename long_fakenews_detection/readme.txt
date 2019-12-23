@@ -23,3 +23,22 @@ Email address: admin@example.com
 Password: 123456
 Password (again): 123456
 Superuser created successfully.
+
+5，常见错误
+"CSRF token missing or incorrect."的解决方法
+如果不屏蔽CSRF
+html中的form添加模板标签{% csrf_token %}
+
+如果要屏蔽CSRF
+
+方法1：注释掉django工程settings.py中
+
+#'django.middleware.csrf.CsrfViewMiddleware'
+
+
+方法2：django工程views.py添加屏蔽装饰器
+
+from django.views.decorators.csrf import csrf_exempt
+@csrf_exempt
+def some_view(request):
+    #...

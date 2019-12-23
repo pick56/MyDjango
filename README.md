@@ -1,13 +1,17 @@
 # MyDjango
 一个快速建立django网站的模板
 
-# mysite
-说白了，就是按照官网的教程，实现了一个投票应用
-https://docs.djangoproject.com/zh-hans/2.1/intro/tutorial01/
-如果为了明白其中原理最好是按照上面的教程走一遍。
-把7步走完就成我这个样子了
+[toc]
 
-功能很简单
+# mysite
+按照Django官网的教程，实现的一个投票应用
+https://docs.djangoproject.com/zh-hans/2.1/intro/tutorial01/
+
+强烈推荐按照官网的教程一步一步实践一遍，这样可以加深对django的理解。
+
+当你把官方教程的的7个主要步骤都实践一遍，你就可以做出一个这样的投票应用。
+
+功能很简单，基本的原理也是很简单。
 
 1，前端+后端通信。
 

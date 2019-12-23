@@ -19,8 +19,6 @@ def detail(request, txt_id):
     print("show detail", txt_id)
     # 第一个参数是请求对象，第二个参数是模板名，第三个可选参数是字典。它返回使用给定上下文呈现的给定模板的HttpResponse对象。
     return render(request, 'long_fakenews_detection/detail.html')
-
-
     # video = VideoDetection.objects.get(video_id=video_id)
     # return render(request, 'videodetection/detail.html', {'video': video})
 
@@ -28,12 +26,12 @@ def check_txt(request):
     print("检测文本")
     rawcontent = request.POST.get('content')
     print(rawcontent)
-    print("real or not")
+    # print("real or not")
     # 将路径保存到数据库中。
     tz = pytz.timezone('Asia/Shanghai')
     t = datetime.now(tz)
     timestamp = t.strftime('%Y-%m-%d %H:%M:%S')
-    video_id = t.strftime('%Y%m%d%H%M%S')
+    txt_id = t.strftime('%Y%m%d%H%M%S')
     # video = VideoDetection(video_id=video_id)
     # video.rawvideopath = rawvideopath
     # video.newvideopath = newvideopath
@@ -44,9 +42,8 @@ def check_txt(request):
     # video.save()
 
     result = []
-    result.append(video_id)
+    result.append(txt_id)
     # print(result)
     return JsonResponse(json.dumps(result), content_type='application/json', safe=False)
-    # 第一个参数是请求对象，第二个参数是模板名，第三个可选参数是字典。它返回使用给定上下文呈现的给定模板的HttpResponse对象。
-    # return render(request, 'long_fakenews_detection/detail.html')
+
 
